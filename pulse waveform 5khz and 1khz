@@ -1,0 +1,56 @@
+a)
+
+mov tmod,#01 ; timer 0, mode 1(16-bit mode)
+
+here: mov t10,#0f2h;
+
+mov th0,#0ffh;
+
+cpl p1.5;toggle p1.5
+
+acall delay
+
+sjmp here
+
+delay:
+
+setb tro;
+
+again: jnb tf0,again;
+
+over clr tr0;
+
+clr tf0;
+
+ret
+
+end
+
+
+b)
+
+org 0000h
+
+mov p1,#08h
+
+acall delay
+
+acall delay
+
+acall delay
+
+movp1,00h
+
+acall delay
+
+sjmp back
+
+delay: mov r0,#200
+
+here:
+
+djnz r3, here
+
+ret
+
+end
