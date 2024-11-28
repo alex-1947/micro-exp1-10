@@ -1,0 +1,37 @@
+a) MOV TMOD,#20H;
+
+MOV SCON, #50H;
+
+SETB TR1;
+
+AGAIN: MOV SBUF, #"A";
+
+HERE: JNB TI, HERE;
+
+CLR TI;
+
+SJMP AGAIN;
+
+b)
+
+MOV TMOD, #20H ;
+
+MOV TH1, #-3 ;
+
+MOV SCON,#50H
+
+SETB TR1
+
+AGAIN: MOV A,#"Y" ;
+
+"Y" ACALL TRANS
+
+MOV A,#"E" ;
+
+ACALL TRANS
+
+MOV A,#"S"; transfer "S"
+
+ACALL TRANS
+
+SJMP AGAIN ;
