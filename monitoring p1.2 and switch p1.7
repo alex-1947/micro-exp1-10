@@ -1,0 +1,18 @@
+a)
+
+setb p1.2 ;
+mov a,#45h;
+again: jnb p1.2,again;
+mov p0,a;
+setb p2.3 ;
+clr p2.3 ;
+
+b)
+
+start: jnb p1.7, onn ;
+mov p2, #'y' ;
+sjmp start;
+
+onn: mov p2, #'n' ;
+sjmp start ;
+end
