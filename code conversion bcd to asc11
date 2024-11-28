@@ -1,0 +1,33 @@
+numbers ORG OH
+
+MOV A, #29H
+
+MOV R2, A
+
+ANL A, #0FH
+
+ORL A, #30H
+
+MOV R6,A
+
+MOV A, R2
+
+ANL A, #0FOH
+
+RR A
+
+RR A
+
+RR A
+
+RR A
+
+ORL A, #30H
+
+MOV R2,A
+
+R2 MOV P1,A
+
+MOV P2,R6
+SJMP $ 
+END
