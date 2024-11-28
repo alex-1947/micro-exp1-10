@@ -1,0 +1,85 @@
+ORG 00H
+
+MOV R0, #34H
+
+MOV A, RO
+
+ANL A, #0FH
+
+operation MOV P1, A
+
+MOV A, RO
+
+ORL A, #0FH
+
+MOV P1, A
+
+MOV A, RO
+
+XRL A, #0FH
+
+operations MOV P1, A
+
+MOV A, RO
+
+CPL A
+
+operations MOV P1, A
+
+MOV A, RO
+CLR A
+
+MOV P1, A
+
+MOV A, RO
+
+RR A
+
+operations RR A
+
+RR A
+
+RR A
+
+MOV P1, A
+
+MOV A, RO
+
+RL A
+
+operations RL A
+
+RL A
+
+RL A
+
+MOV P1, A
+
+MOV A, RO
+
+SETB C
+
+RRC A
+
+operations RRC A
+
+RRC A
+
+RRC A
+
+MOV P1, A
+
+MOV A, RO
+
+RLC A
+
+operations RLC A
+
+RLC A
+
+RLC A
+
+MOV P1, A
+
+SJMP $
+end
