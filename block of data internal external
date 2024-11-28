@@ -1,0 +1,28 @@
+For internal memory
+
+mov r0, #30h; store internal memory address in ro
+mov a, #00h clear accumulator
+mov r7, #07h; counter register
+back:
+add a,@r0
+inc ro
+next value
+end
+djnz r7, back;
+
+for external memory
+
+mov dptr, #0200h; store external memory address in
+r0 mov a, #00h
+clear accumulator
+mov r7, #00
+sum register
+mov r6, #07
+counter register
+back:
+movx a, @dptr;
+add a, r7
+mov r7, a
+inc dptr
+djnz r6, back;
+end
